@@ -32,3 +32,10 @@
 
 # Composer PHAR
 /composer.phar
+
+# web vendor folder
+/web/vendor/*
+/web/tmp/*
+
+# idea folder
+/.idea/*
