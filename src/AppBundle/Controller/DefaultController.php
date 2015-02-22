@@ -21,10 +21,10 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/placeholder", name="get-placeholder")
+     * @Route("/placeholder/{format}", name="get-placeholder", defaults={"format": "browser"}, requirements={"format" = "(browser|file)"})
      * @Method("GET")
      */
-    public function getPlaceholderImageAction(Request $request)
+    public function getPlaceholderImageAction(Request $request, $format)
     {
         $text = urldecode($request->get('text'));
         $height = $request->get('height');
@@ -45,10 +45,17 @@ class DefaultController extends Controller
         );
 
         $response = new Response();
+
         $response->headers->set(
             'Content-Type',
             'image/png'
         );
+        if ($format == 'file') {
+            $response->headers->set(
+                'Content-Disposition',
+                'attachment; filename="placeholder.png";'
+            );
+        }
         $response->sendHeaders();
 
         imagepng($image);
