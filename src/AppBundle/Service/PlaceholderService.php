@@ -14,31 +14,37 @@ class PlaceholderService {
     const DEFAULT_HEIGHT = 300;
     const DEFAULT_WIDTH = 300;
     const DEFAULT_COLOR = 'CCCCCC';
+    const DEFAULT_FONT_COLOR = '000000';
     const FONT_SIZE = 20;
 
     private $text;
     private $height;
     private $width;
     private $bgColor;
+    private $fontColor;
+    private $fontSize;
 
     public function generatePlaceholderImage(
         $text = null,
         $height = null,
         $width = null,
-        $color = null
+        $color = null,
+        $fontColor = null,
+        $fontSize = null,
+        $filePath = null
     )
     {
 
-        list($this->text, $this->height, $this->width, $this->bgColor) = $this->populateParameters($text, $height, $width, $color);
+        list($this->text, $this->height, $this->width, $this->bgColor, $this->fontColor, $this->fontSize) = $this->populateParameters($text, $height, $width, $color, $fontColor, $fontSize);
 
         $image = $this->getImage($width, $height, $color);
         $image = $this->putTextOnImage($image, $text);
 
-        $filepath = $this->saveImageToFile($image, 'test.png');
+        if ($filePath) {
+            return $this->saveImageToFile($image, $filePath);
+        }
 
-        var_dump($filepath);
-
-        die();
+        return $image;
 
     }
 
@@ -57,6 +63,7 @@ class PlaceholderService {
 
     private function convertToFullHex($hexColor)
     {
+
         if (strlen($hexColor) == 6) {
             return $hexColor;
         }
@@ -64,14 +71,14 @@ class PlaceholderService {
         if (strlen($hexColor) == 3) {
             $fullHex = '';
             foreach (str_split($hexColor) as $char) {
-                var_dump($char);
                 $fullHex .= $char;
                 $fullHex .= $char;
             }
             $hexColor = $fullHex;
+            return $hexColor;
         }
 
-        return self::DEFAULT_COLOR;
+        throw new \Exception('Incorrect color value');
     }
 
     private function getImage()
@@ -101,7 +108,7 @@ class PlaceholderService {
 
         $font = $this->getFont('arial.ttf');
         $text = $this->wrapText(
-            self::FONT_SIZE,
+            $this->fontSize,
             0,
             $font,
             $text,
@@ -109,7 +116,7 @@ class PlaceholderService {
         );
 
         $textBox = imagettfbbox(
-            self::FONT_SIZE,
+            $this->fontSize,
             0,
             $font,
             $text
@@ -118,10 +125,22 @@ class PlaceholderService {
         $offsetY = ($this->height - $textBox[1]) / 2;
         $offsetX = ($this->width - $textBox[2]) / 2;
 
-        $fontColor = imagecolorallocate($image, 0, 0, 0);
+        $fontColor = imagecolorallocate(
+            $image,
+            $this->fontColor[0],
+            $this->fontColor[1],
+            $this->fontColor[2]
+        );
+//        $shadowOffset = 20;
+//        $fontShadow = imagecolorallocate(
+//            $image,
+//            $this->fontColor[0] - $shadowOffset,
+//            $this->fontColor[1] - $shadowOffset,
+//            $this->fontColor[2] - $shadowOffset
+//        );
 
-        imagettftext($image, self::FONT_SIZE, 0, $offsetX + 1, $offsetY + 1, $fontColor, $font, $text);
-//        imagettftext($im, $fontSize, 0, $offsetX, $offsetY, $black, $font, $text);
+        imagettftext($image, $this->fontSize, 0, $offsetX, $offsetY, $fontColor, $font, $text);
+//        imagettftext($image, $this->fontSize, 0, $offsetX, $offsetY, $fontShadow, $font, $text);
 
         return $image;
     }
@@ -155,7 +174,7 @@ class PlaceholderService {
 
     }
 
-    private function populateParameters($text, $height, $width, $color)
+    private function populateParameters($text, $height, $width, $color, $fontColor, $fontSize)
     {
         $params = array();
         $params[] = $text;
@@ -166,18 +185,25 @@ class PlaceholderService {
         if (!$width) $width = self::DEFAULT_WIDTH;
         $params[] = $width;
 
+        if (!$color) $color = self::DEFAULT_COLOR;
         $params[] = $this->convertHexToRgb($color);
+
+        if (!$fontColor) $fontColor = self::DEFAULT_FONT_COLOR;
+        $params[] = $this->convertHexToRgb($fontColor);
+
+        if (!(int)$fontSize) {
+            $fontSize = self::FONT_SIZE;
+        }
+        $params[] = $fontSize;
 
         return $params;
     }
 
-    private function saveImageToFile($image, $fileName)
+    private function saveImageToFile($image, $filePath)
     {
-        $filePath = realpath('') . '/tmp/' . $fileName;
         if (!imagepng($image, $filePath)) {
             $filePath = null;
         }
-        imagedestroy($image);
         return $filePath;
     }
 

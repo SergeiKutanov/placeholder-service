@@ -2,10 +2,13 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Form\PlaceholderType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class DefaultController extends Controller
 {
@@ -14,7 +17,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig');
+        return $this->render('AppBundle::index.html.twig');
     }
 
     /**
@@ -23,10 +26,12 @@ class DefaultController extends Controller
      */
     public function getPlaceholderImageAction(Request $request)
     {
-        $text = $request->get('text');
+        $text = urldecode($request->get('text'));
         $height = $request->get('height');
         $width = $request->get('width');
         $color = $request->get('color');
+        $fontColor = $request->get('font-color');
+        $fontSize = $request->get('font-size');
 
         /* @var $placeHolderService \AppBundle\Service\PlaceholderService */
         $placeHolderService = $this->get('placeholder_service');
@@ -34,16 +39,49 @@ class DefaultController extends Controller
             $text,
             $height,
             $width,
-            $color
+            $color,
+            $fontColor,
+            $fontSize
         );
 
-        var_dump(
-            $text,
-            $height,
-            $width,
-            $color
+        $response = new Response();
+        $response->headers->set(
+            'Content-Type',
+            'image/png'
+        );
+        $response->sendHeaders();
+
+        imagepng($image);
+        imagedestroy($image);
+
+        return $response;
+
+    }
+
+    /**
+     * @Route("/build-online", name="build-online")
+     * @Method("GET")
+     */
+    public function generateOnlineAction()
+    {
+
+        $form = $this->createForm(
+            new PlaceholderType(),
+            null,
+            array(
+                'method'    => 'GET',
+                'action'    => $this->generateUrl('build-online'),
+                'attr'      => array(
+                    'class' => 'form-horizontal'
+                )
+            )
         );
 
-        die();
+        return $this->render(
+            'AppBundle::build-online.html.twig',
+            array(
+                'form'  => $form->createView()
+            )
+        );
     }
 }
