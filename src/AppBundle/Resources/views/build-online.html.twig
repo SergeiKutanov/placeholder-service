@@ -1,5 +1,14 @@
 {% extends 'AppBundle::base.html.twig' %}
 
+{% block keywords_description %}
+    <meta name="keywords" content="placeholder, image, create, online, tool">
+    <meta name="description" content="Use our placeholder image creation tool to build your image online">
+{% endblock %}
+
+{% block title %}
+    Placeholder building tool
+{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="page-header">
@@ -60,11 +69,44 @@
                 </div>
             </div>
             {{ form_end(form) }}
+            <h3>Url parameters definition</h3>
+            <p>Let's go through with the url's parameters. There are 6 parameters in total none of which are required.</p>
+            <h4>They are</h4>
+            <ul class="list-group">
+                <li class="list-group-item">text - text to be printed on the placeholder image. Should be url encoded.<span class="badge">default: empty</span></li>
+                <li class="list-group-item">width - integer value of image width in pixels<span class="badge">default: 300</span></li>
+                <li class="list-group-item">height - integer value of image height in pixels<span class="badge">default: 300</span></li>
+                <li class="list-group-item">color - hex value of background color for the placeholder image. Omit the pound sign(#)<span class="badge">default: FFFFFF</span></li>
+                <li class="list-group-item">font-color - hex value of the font's color. Omit the pound sign (#) as well<span class="badge">default: 555555</span></li>
+                <li class="list-group-item">font-size - integer value in pixels for font's size<span class="badge">default: 14</span></li>
+            </ul>
+
+            <h3>Help us running</h3>
+            <p>If you like our service, please, donate to help us run our project.</p>
+            <div>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="BMGKQJGTRACFY">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
+                </form>
+            </div>
         </div>
         <div class="col-xs-12 col-sm-4">
             <div class="well">
-                <h2>Explanation</h2>
-                <p>So, in a few minutes you'll see that our service can be used without any special knowledge.</p>
+                <h2>Disclaimer</h2>
+                <p>Let's get through with our placeholder creation tool.</p>
+                <p>The form on the left is already filled with default values. Most of them are self explanatory. But we're going to make sure there are no questions left behind.</p>
+                <h3>Text field</h3>
+                <p>Use it to define the text to be printed on the placeholder image. Or just leave it blank.</p>
+                <h3>Width and Height fields</h3>
+                <p>These field are used to define the placeholder's size in pixels.</p>
+                <h3>Background Color</h3>
+                <p>Placeholder's background color. Use hex value to define it. You can enter it directly or click the right part of the input field (the greyed one) and use a little color picker popup.</p>
+                <h3>Font Color and Size fields</h3>
+                <p>Use these to define font's properties.</p>
+                <h3>Push the button</h3>
+                <p>After you are done with the parameters push the "Get Placeholder" button. You'll see a popup window with the image you create. In that window you can either copy and paste the url of the image or simply download the image itself.</p>
             </div>
         </div>
     </div>

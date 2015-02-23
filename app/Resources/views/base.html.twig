@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}Placeholder Image{% endblock %}</title>
+        {% block keywords_description %}
+        <meta name="keywords" content="placeholder, image, create, online, service">
+        <meta name="description" content="Create online your own placeholder image with our service">
+        {% endblock %}
+        <title>{% block title %}Placeholder Image Service{% endblock %}</title>
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('vendor/bootstrap/dist/css/bootstrap.css') }}">
             {% stylesheets 'bundles/app/css/*' filter='cssrewrite' %}
