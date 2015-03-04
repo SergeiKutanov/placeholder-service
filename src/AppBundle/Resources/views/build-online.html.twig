@@ -1,43 +1,43 @@
 {% extends 'AppBundle::base.html.twig' %}
 
 {% block keywords_description %}
-    <meta name="keywords" content="placeholder, image, create, online, tool">
-    <meta name="description" content="Use our placeholder image creation tool to build your image online">
+    <meta name="keywords" content="{% trans %}placeholder, image, create, online, generate, tool{% endtrans %}">
+    <meta name="description" content="{% trans %}Use our placeholder image creation tool to build your image online{% endtrans %}">
 {% endblock %}
 
 {% block title %}
-    Placeholder building tool
+    {% trans %}Placeholder building tool{% endtrans %}
 {% endblock %}
 
 {% block content %}
 <div class="container">
     <div class="page-header">
-        <h1>Create a placeholder image</h1>
-        <p>Use our online tool to create your next placeholder image</p>
+        <h1>{% trans %}Create a placeholder image{% endtrans %}</h1>
+        <p>{% trans %}Use our online tool to create your next placeholder image{% endtrans %}</p>
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-8">
             {{ form_start(form) }}
             <div class="form-group">
-                {{ form_label(form.text) }}
+                {{ form_label(form.text, 'Text' | trans ) }}
                 <div class="col-sm-10">
-                {{ form_widget(form.text) }}
+                {{ form_widget(form.text, {'attr': {'value': 'Some Text' | trans,'class': 'form-control', 'placeholder': 'Enter text to be printed on the image (default value - empty)' | trans}}) }}
                 </div>
             </div>
             <div class="form-group">
-                {{ form_label(form.width) }}
+                {{ form_label(form.width, 'Width (px)' | trans) }}
                 <div class="col-sm-10">
-                {{ form_widget(form.width) }}
+                {{ form_widget(form.width, {'attr': {'placeholder': 'Enter width for your image (default value - 300)' | trans}}) }}
                 </div>
             </div>
             <div class="form-group">
-                {{ form_label(form.height) }}
+                {{ form_label(form.height, 'Height (px)' | trans) }}
                 <div class="col-sm-10">
-                    {{ form_widget(form.height) }}
+                    {{ form_widget(form.height, {'attr': {'placeholder': 'Enter height for your image (default value - 300)' | trans}}) }}
                 </div>
             </div>
             <div class="form-group">
-                {{ form_label(form.bgcolor) }}
+                {{ form_label(form.bgcolor, 'Backrgound Color (HEX)' | trans) }}
                 <div class="col-sm-10">
                     <div class="input-group bgcolor">
                         {{ form_widget(form.bgcolor) }}
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="form-group">
-                {{ form_label(form.fontcolor) }}
+                {{ form_label(form.fontcolor, 'Font Color (HEX)' | trans) }}
                 <div class="col-sm-10">
                     <div class="input-group bgcolor">
                         {{ form_widget(form.fontcolor) }}
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="form-group">
-                {{ form_label(form.fontsize) }}
+                {{ form_label(form.fontsize, 'Font Size (px)' | trans) }}
                 <div class="col-sm-10">
                     {{ form_widget(form.fontsize) }}
                 </div>
@@ -65,24 +65,24 @@
                     <button
                             id="generate-placeholder"
                             class="btn btn-primary"
-                            data-base-path="{{ url('get-placeholder') }}">Get Placeholder</button>
+                            data-base-path="{{ url('get-placeholder') }}">{% trans %}Get Placeholder{% endtrans %}</button>
                 </div>
             </div>
             {{ form_end(form) }}
-            <h3>Url parameters definition</h3>
-            <p>Let's go through with the url's parameters. There are 6 parameters in total none of which are required.</p>
-            <h4>They are</h4>
+            <h3>{% trans %}Url parameters definition{% endtrans %}</h3>
+            <p>{% trans %}Let's go through with the url's parameters. There are 6 parameters in total none of which are required.{% endtrans %}</p>
+            <h4>{% trans %}They are{% endtrans %}</h4>
             <ul class="list-group">
-                <li class="list-group-item">text - text to be printed on the placeholder image. Should be url encoded.<span class="badge">default: empty</span></li>
-                <li class="list-group-item">width - integer value of image width in pixels<span class="badge">default: 300</span></li>
-                <li class="list-group-item">height - integer value of image height in pixels<span class="badge">default: 300</span></li>
-                <li class="list-group-item">color - hex value of background color for the placeholder image. Omit the pound sign(#)<span class="badge">default: FFFFFF</span></li>
-                <li class="list-group-item">font-color - hex value of the font's color. Omit the pound sign (#) as well<span class="badge">default: 555555</span></li>
-                <li class="list-group-item">font-size - integer value in pixels for font's size<span class="badge">default: 14</span></li>
+                <li class="list-group-item">text - {% trans %}text to be printed on the placeholder image. Should be url encoded.{% endtrans %}<span class="badge">{% trans %}default: empty{% endtrans %}</span></li>
+                <li class="list-group-item">width - {% trans %}integer value of image width in pixels{% endtrans %}<span class="badge">{% trans %}default: 300{% endtrans %}</span></li>
+                <li class="list-group-item">height - {% trans %}integer value of image height in pixels{% endtrans %}<span class="badge">{% trans %}default: 300{% endtrans %}</span></li>
+                <li class="list-group-item">color - {% trans %}hex value of background color for the placeholder image. Omit the pound sign(#){% endtrans %}<span class="badge">{% trans %}default: FFFFFF{% endtrans %}</span></li>
+                <li class="list-group-item">font-color - {% trans %}hex value of the font's color. Omit the pound sign (#) as well{% endtrans %}<span class="badge">{% trans %}default: 555555{% endtrans %}</span></li>
+                <li class="list-group-item">font-size - {% trans %}integer value in pixels for font's size{% endtrans %}<span class="badge">{% trans %}default: 14{% endtrans %}</span></li>
             </ul>
 
-            <h3>Help us running</h3>
-            <p>If you like our service, please, donate to help us run our project.</p>
+            <h3>{% trans %}Help us running{% endtrans %}</h3>
+            <p>{% trans %}If you like our service, please, donate to help us run our project.{% endtrans %}</p>
             <div>
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
@@ -94,19 +94,19 @@
         </div>
         <div class="col-xs-12 col-sm-4">
             <div class="well">
-                <h2>Disclaimer</h2>
-                <p>Let's get through with our placeholder creation tool.</p>
-                <p>The form on the left is already filled with default values. Most of them are self explanatory. But we're going to make sure there are no questions left behind.</p>
-                <h3>Text field</h3>
-                <p>Use it to define the text to be printed on the placeholder image. Or just leave it blank.</p>
-                <h3>Width and Height fields</h3>
-                <p>These field are used to define the placeholder's size in pixels.</p>
-                <h3>Background Color</h3>
-                <p>Placeholder's background color. Use hex value to define it. You can enter it directly or click the right part of the input field (the greyed one) and use a little color picker popup.</p>
-                <h3>Font Color and Size fields</h3>
-                <p>Use these to define font's properties.</p>
-                <h3>Push the button</h3>
-                <p>After you are done with the parameters push the "Get Placeholder" button. You'll see a popup window with the image you create. In that window you can either copy and paste the url of the image or simply download the image itself.</p>
+                <h2>{% trans %}Disclaimer{% endtrans %}</h2>
+                <p>{% trans %}Let's get through with our placeholder creation tool.{% endtrans %}</p>
+                <p>{% trans %}The form on the left is already filled with default values. Most of them are self explanatory. But we're going to make sure there are no questions left behind.{% endtrans %}</p>
+                <h3>{% trans %}Text field{% endtrans %}</h3>
+                <p>{% trans %}Use it to define the text to be printed on the placeholder image. Or just leave it blank.{% endtrans %}</p>
+                <h3>{% trans %}Width and Height fields{% endtrans %}</h3>
+                <p>{% trans %}These field are used to define the placeholder's size in pixels.{% endtrans %}</p>
+                <h3>{% trans %}Background Color{% endtrans %}</h3>
+                <p>{% trans %}Placeholder's background color. Use hex value to define it. You can enter it directly or click the right part of the input field (the greyed one) and use a little color picker popup.{% endtrans %}</p>
+                <h3>{% trans %}Font Color and Size fields{% endtrans %}</h3>
+                <p>{% trans %}Use these to define font's properties.{% endtrans %}</p>
+                <h3>{% trans %}Push the button{% endtrans %}</h3>
+                <p>{% trans %}After you are done with the parameters push the "Get Placeholder" button. You'll see a popup window with the image you create. In that window you can either copy and paste the url of the image or simply download the image itself.{% endtrans %}</p>
             </div>
         </div>
     </div>
@@ -117,7 +117,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">That's your placeholder</h4>
+                <h4 class="modal-title" id="myModalLabel">{% trans %}That's your placeholder{% endtrans %}</h4>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -132,8 +132,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <a href="#" class="btn btn-primary" id="download-image-btn">Download Image</a>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <a href="#" class="btn btn-primary" id="download-image-btn">{% trans %}Download Image{% endtrans %}</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">{% trans %}Close{% endtrans %}</button>
             </div>
         </div>
     </div>

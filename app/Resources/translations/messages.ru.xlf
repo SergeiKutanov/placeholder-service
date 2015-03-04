@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ru" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="058fb5f684b9f1a2dc1efaed9fb7a774" resname="Create online your own placeholder image with our service">
+        <source>Create online your own placeholder image with our service</source>
+        <target>Создайте свой вариант картинки-заглушки на нашем сайте</target>
+      </trans-unit>
+      <trans-unit id="0c401bbc43a877c9feb93c2ed067e918" resname="Placeholder Image Service">
+        <source>Placeholder Image Service</source>
+        <target>Онлайн генератор картинок заглушек</target>
+      </trans-unit>
+      <trans-unit id="df6ce6cdf0a341df9ad6b51196e2495a" resname="placeholder, image, create, online, generator, service">
+        <source>placeholder, image, create, online, generator, service</source>
+        <target>заглушка, картинка, создать, онлайн, генератор, служба</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

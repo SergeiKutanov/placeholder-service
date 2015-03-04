@@ -17,8 +17,6 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $l = $request->getSession()->get('_locale');
-        var_dump($l);
         return $this->render('AppBundle::index.html.twig');
     }
 

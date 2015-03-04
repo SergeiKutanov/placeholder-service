@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ru" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="6c7195551da0802a39b5e2bc7187df54" resname="Toggle navigation">
+        <source>Toggle navigation</source>
+        <target>Открыть меню</target>
+      </trans-unit>
+      <trans-unit id="d3ea475635c43d44afc1ea0af18624c3" resname="Placeholder Image">
+        <source>Placeholder Image</source>
+        <target>Генератор картинок заглушек</target>
+      </trans-unit>
+      <trans-unit id="805f1ceb53f7e45e997f77a48c2a6bf3" resname="Build placeholder image online">
+        <source>Build placeholder image online</source>
+        <target>Создайте свою картинку заглушку</target>
+      </trans-unit>
+      <trans-unit id="a1d93d409f373e004dcb9552fa279168" resname="Use our placeholder image creation tool to build your image online">
+        <source>Use our placeholder image creation tool to build your image online</source>
+        <target>Воспользуйтесь нашим генератором картинок заглушек онлайн и создайте свой индивидуальный вариант</target>
+      </trans-unit>
+      <trans-unit id="021443bb13e044cd46d82138d13a4d3f" resname="Placeholder building tool">
+        <source>Placeholder building tool</source>
+        <target>Генератор картинки заглушки</target>
+      </trans-unit>
+      <trans-unit id="f72fd3de4079b908fc09861d0cb80be8" resname="Create a placeholder image">
+        <source>Create a placeholder image</source>
+        <target>Создайте картинку заглушку</target>
+      </trans-unit>
+      <trans-unit id="039a67b7eceb5c8569fcf367494ca656" resname="Use our online tool to create your next placeholder image">
+        <source>Use our online tool to create your next placeholder image</source>
+        <target>Создайте свою картинку заглушку при помощи нашего генератора</target>
+      </trans-unit>
+      <trans-unit id="9dffbf69ffba8bc38bc4e01abf4b1675" resname="Text">
+        <source>Text</source>
+        <target>Текст</target>
+      </trans-unit>
+      <trans-unit id="56e57920c3c8c727bfe7a5288cdf61c4" resname="Some Text">
+        <source>Some Text</source>
+        <target>Любой текст</target>
+      </trans-unit>
+      <trans-unit id="7a972ca35a58d81abb9aea9128383e0c" resname="Enter text to be printed on the image (default value - empty)">
+        <source>Enter text to be printed on the image (default value - empty)</source>
+        <target>Введите текст для картинки (значение по-умолчанию - пустая строка)</target>
+      </trans-unit>
+      <trans-unit id="ee8d82448ba8787a6ae043a53157f36e" resname="Width (px)">
+        <source>Width (px)</source>
+        <target>Ширина (px)</target>
+      </trans-unit>
+      <trans-unit id="bee695d3a7ad1e1614fbd9e38dae1763" resname="Enter width for your image (default value - 300)">
+        <source>Enter width for your image (default value - 300)</source>
+        <target>Введите ширину картинки (значение по-умолчанию - 300)</target>
+      </trans-unit>
+      <trans-unit id="e03b313cd093a6368ea5e16a8e2af335" resname="Height (px)">
+        <source>Height (px)</source>
+        <target>Высота (px)</target>
+      </trans-unit>
+      <trans-unit id="bc7fc4007051ea33839f1c4fb99695c3" resname="Enter height for your image (default value - 300)">
+        <source>Enter height for your image (default value - 300)</source>
+        <target>Введите высоту картинки (значение по-умолчанию - 300)</target>
+      </trans-unit>
+      <trans-unit id="798d0fb0748c1a975458fdca5902ab56" resname="Backrgound Color (HEX)">
+        <source>Backrgound Color (HEX)</source>
+        <target>Цвет фона (HEX)</target>
+      </trans-unit>
+      <trans-unit id="cfd9353f15cb67f449aef02727038cd1" resname="Font Color (HEX)">
+        <source>Font Color (HEX)</source>
+        <target>Цвет шрифта (HEX)</target>
+      </trans-unit>
+      <trans-unit id="f168fce1ed1a1c0e65ad1ec8e071772b" resname="Font Size (px)">
+        <source>Font Size (px)</source>
+        <target>Размер шрифта (px)</target>
+      </trans-unit>
+      <trans-unit id="6d52ff3d962046a555fc1393ab9e0189" resname="Get Placeholder">
+        <source>Get Placeholder</source>
+        <target>Открыть картинку заглушку</target>
+      </trans-unit>
+      <trans-unit id="bd02593f036507ff678c8d1003eef7d4" resname="Url parameters definition">
+        <source>Url parameters definition</source>
+        <target>Описание параметров URL</target>
+      </trans-unit>
+      <trans-unit id="a0fd3cf777a8b71f3f6f0c9378e19875" resname="Let's go through with the url's parameters. There are 6 parameters in total none of which are required.">
+        <source>Let's go through with the url's parameters. There are 6 parameters in total none of which are required.</source>
+        <target>Рассмотрим параметры URL для генерации картинки заглушки. Существует 6 допустимых параметров, все они не являются обязательными.</target>
+      </trans-unit>
+      <trans-unit id="a3530d4b351fc4ef61125e35014cc523" resname="They are">
+        <source>They are</source>
+        <target>Список параметров</target>
+      </trans-unit>
+      <trans-unit id="e76742e062e87a8496021062de32cf8e" resname="text to be printed on the placeholder image. Should be url encoded.">
+        <source>text to be printed on the placeholder image. Should be url encoded.</source>
+        <target>текст, который будет напечатан на картинке. Значение параметра должно быть обработано функцией url_encode</target>
+      </trans-unit>
+      <trans-unit id="e232511a63ddb4e39caa9f8845e286a3" resname="default: empty">
+        <source>default: empty</source>
+        <target>значение по-умолчанию: пустая строка</target>
+      </trans-unit>
+      <trans-unit id="1d07f0d567ca6903acfe056a6ad8090c" resname="integer value of image width in pixels">
+        <source>integer value of image width in pixels</source>
+        <target>целочисленнное значение ширины картинки в пикселях</target>
+      </trans-unit>
+      <trans-unit id="2305b16983516f2065f7d0e4dbe23257" resname="default: 300">
+        <source>default: 300</source>
+        <target>значение по-умолчанию: 300</target>
+      </trans-unit>
+      <trans-unit id="c9fddae36067614f1b0978916a19b620" resname="integer value of image height in pixels">
+        <source>integer value of image height in pixels</source>
+        <target>целочисленное значение высоты картинки в пикселях</target>
+      </trans-unit>
+      <trans-unit id="c58cd92e76974fb5d1a908d9cbb888eb" resname="default: FFFFFF">
+        <source>default: FFFFFF</source>
+        <target>значение по-умолчанию: FFFFFF</target>
+      </trans-unit>
+      <trans-unit id="49d3c6b20282e4118286e1ff46a72c85" resname="hex value of the font's color. Omit the pound sign (#) as well">
+        <source>hex value of the font's color. Omit the pound sign (#) as well</source>
+        <target>HEX хначение цвета шрифта. Символ (#) не указывается</target>
+      </trans-unit>
+      <trans-unit id="ce89b984656cffa3b1a3fcf2497a1ab9" resname="default: 555555">
+        <source>default: 555555</source>
+        <target>значение по-умолчанию: 555555</target>
+      </trans-unit>
+      <trans-unit id="57beca5f362c6020b97febccd7bf171b" resname="integer value in pixels for font's size">
+        <source>integer value in pixels for font's size</source>
+        <target>целочисленное значение размера шрифта в пикселях</target>
+      </trans-unit>
+      <trans-unit id="88cf97bf5e1b756cb0bff1c5583f825b" resname="default: 14">
+        <source>default: 14</source>
+        <target>значение по-умолчанию: 14</target>
+      </trans-unit>
+      <trans-unit id="0084eb2920cf443e17b86d32dc589aa7" resname="Help us running">
+        <source>Help us running</source>
+        <target>Окажите помощи в поддержании сервиса</target>
+      </trans-unit>
+      <trans-unit id="39cb1ce028b08113518f6d875d5b2fa8" resname="If you like our service, please, donate to help us run our project.">
+        <source>If you like our service, please, donate to help us run our project.</source>
+        <target>Если вы используете наш генератор картинок изображений, мы будем рады любой помощи.</target>
+      </trans-unit>
+      <trans-unit id="ad0a802ec8134e9210a5625933db50a7" resname="Disclaimer">
+        <source>Disclaimer</source>
+        <target>Генератор картинок заглушек</target>
+      </trans-unit>
+      <trans-unit id="a8f5327c4e7863b51d3b9b2e5cf86d32" resname="Let's get through with our placeholder creation tool.">
+        <source>Let's get through with our placeholder creation tool.</source>
+        <target>Рассмотрим как пользоваться генератором картинок заглушек</target>
+      </trans-unit>
+      <trans-unit id="0aa54d2ace00b8ef751062870205c95e" resname="The form on the left is already filled with default values. Most of them are self explanatory. But we're going to make sure there are no questions left behind.">
+        <source>The form on the left is already filled with default values. Most of them are self explanatory. But we're going to make sure there are no questions left behind.</source>
+        <target>Мы заранее для вас заполнили значения полей генератора. Названия большинства из них говорят сами за себя. Но все же опишем все их по отдельности, чтобы не соталось вопросов.</target>
+      </trans-unit>
+      <trans-unit id="40ac89df9ff895152e53bb7ffb13a024" resname="Text field">
+        <source>Text field</source>
+        <target>Поле Текст</target>
+      </trans-unit>
+      <trans-unit id="0248c951acd59258e2aa40309ba4c4a4" resname="Use it to define the text to be printed on the placeholder image. Or just leave it blank.">
+        <source>Use it to define the text to be printed on the placeholder image. Or just leave it blank.</source>
+        <target>Укажите текст, который вы хотите получить на картинке заглушке. Поле можно оставить пустым.</target>
+      </trans-unit>
+      <trans-unit id="b05117c92f7269aadf1b7bed0ae29d06" resname="Width and Height fields">
+        <source>Width and Height fields</source>
+        <target>Поля Высота и Ширина</target>
+      </trans-unit>
+      <trans-unit id="d622c84a8e8492855fb2170980255ae2" resname="These field are used to define the placeholder's size in pixels.">
+        <source>These field are used to define the placeholder's size in pixels.</source>
+        <target>В этих полях вы можете изменить размеры картинки заглушки в пикселях.</target>
+      </trans-unit>
+      <trans-unit id="75e7422f2fe253fc69d3f6c148d197ee" resname="Background Color">
+        <source>Background Color</source>
+        <target>Цвет фона</target>
+      </trans-unit>
+      <trans-unit id="404e82c848b1d1af2cef7cf21e0f3e71" resname="Placeholder's background color. Use hex value to define it. You can enter it directly or click the right part of the input field (the greyed one) and use a little color picker popup.">
+        <source>Placeholder's background color. Use hex value to define it. You can enter it directly or click the right part of the input field (the greyed one) and use a little color picker popup.</source>
+        <target>Укажите HEX значения цвета, который вы хотели бы использовать в качестве фона картинки.</target>
+      </trans-unit>
+      <trans-unit id="7ea6920f4e4b945fd0a3742a28a07963" resname="Font Color and Size fields">
+        <source>Font Color and Size fields</source>
+        <target>Цвета и размер шрифта</target>
+      </trans-unit>
+      <trans-unit id="e79bc6486a237c33183bece9313a8429" resname="Use these to define font's properties.">
+        <source>Use these to define font's properties.</source>
+        <target>В этих полях вы можете указать не только размер шрифта в пикселях, но и его цвет, указав HEX значение.</target>
+      </trans-unit>
+      <trans-unit id="1834da4cfa8892a7e3e94e13fc0f8365" resname="Push the button">
+        <source>Push the button</source>
+        <target>Генерируем</target>
+      </trans-unit>
+      <trans-unit id="83863cf3999280f8cbb512d17e1b98b6" resname="After you are done with the parameters push the &quot;Get Placeholder&quot; button. You'll see a popup window with the image you create. In that window you can either copy and paste the url of the image or simply download the image itself.">
+        <source>After you are done with the parameters push the "Get Placeholder" button. You'll see a popup window with the image you create. In that window you can either copy and paste the url of the image or simply download the image itself.</source>
+        <target>Как только вы указали все необходимые параметры, можете смело нажимать на кнопку "Открыть картинку заглушку". Вы увидите новое окно, где будет изображена сама картинка. В этом окне вы можете скачать картинку или скопировать её URL.</target>
+      </trans-unit>
+      <trans-unit id="f721d7be3769edc6d7d40898db866cd0" resname="That's your placeholder">
+        <source>That's your placeholder</source>
+        <target>Ваша картинка заглушка</target>
+      </trans-unit>
+      <trans-unit id="f2ccbce599bc26984b12f20baf022e84" resname="Download Image">
+        <source>Download Image</source>
+        <target>Скачать картинку</target>
+      </trans-unit>
+      <trans-unit id="d3d2e617335f08df83599665eef8a418" resname="Close">
+        <source>Close</source>
+        <target>Закрыть</target>
+      </trans-unit>
+      <trans-unit id="0c401bbc43a877c9feb93c2ed067e918" resname="Placeholder Image Service">
+        <source>Placeholder Image Service</source>
+        <target>Генератор картинки заглушки</target>
+      </trans-unit>
+      <trans-unit id="3322eb3d3907883c1d5a2d514588a164" resname="Quick and Simple">
+        <source>Quick and Simple</source>
+        <target>Быстро и легко</target>
+      </trans-unit>
+      <trans-unit id="d130313d472861060f11202b6fc30c7f" resname="It's really easy to use">
+        <source>It's really easy to use</source>
+        <target>Наш генератор очень прост в использовании</target>
+      </trans-unit>
+      <trans-unit id="5624d32a068686abcfed5a650a6b2825" resname="Just use our %link_start%online placeholder building service%link_end% to create your own crafted placeholder image.">
+        <source>Just use our %link_start%online placeholder building service%link_end% to create your own crafted placeholder image.</source>
+        <target>Просто воспользуйтесь %link_start%генератором картинки заглушки%link_end% чтобы создать свой вариант изображения.</target>
+      </trans-unit>
+      <trans-unit id="44269742f7002da1b74224fd34a0be62" resname="With our %link_start%placeholder builder%link_end% create an image">
+        <source>With our %link_start%placeholder builder%link_end% create an image</source>
+        <target>Создайте изображение с нашим %link_start%генератором картинок заглушек%link_end%</target>
+      </trans-unit>
+      <trans-unit id="43c0ca53c205efba192dacad16cb4bde" resname="Download the generated url or the image itself form the %link_start%our building tool%link_end%">
+        <source>Download the generated url or the image itself form the %link_start%our building tool%link_end%</source>
+        <target>Скопируйте url или саму картинку из %link_start%генератора картинок заглушек%link_end%</target>
+      </trans-unit>
+      <trans-unit id="9b49f8f05f70a4fa3c8aff264d734d98" resname="Insert either the url as image's source attribute or the downloaded image">
+        <source>Insert either the url as image's source attribute or the downloaded image</source>
+        <target>Используйте скопированный url в качестве атрибута src изображения на вашем сайте или сохраните само иображение</target>
+      </trans-unit>
+      <trans-unit id="6d039ed7cc84743bbeb59457d1b9bdc8" resname="These are the things you can manipulate">
+        <source>These are the things you can manipulate</source>
+        <target>Что можно изменять в изображении?</target>
+      </trans-unit>
+      <trans-unit id="1e436dbdd81a3c2b6e0578806e43f048" resname="Of course you can change the printed text itself">
+        <source>Of course you can change the printed text itself</source>
+        <target>Само собой, указывайте нужный вам текст</target>
+      </trans-unit>
+      <trans-unit id="425ab05c05116a328e9b862a272d0637" resname="Then goes font size">
+        <source>Then goes font size</source>
+        <target>А так же размер шрифта</target>
+      </trans-unit>
+      <trans-unit id="802a4e8622ea6cf6ef6fa55e0780d40c" resname="And font color">
+        <source>And font color</source>
+        <target>И его цвет</target>
+      </trans-unit>
+      <trans-unit id="a7bf9ba3efec4cec2e3b872e21b9f2ca" resname="Certainly you can change placeholder image background color">
+        <source>Certainly you can change placeholder image background color</source>
+        <target>Не забудьте установить необходимый цвет фона</target>
+      </trans-unit>
+      <trans-unit id="f0cd508018de9674b142aff4f7b57715" resname="And the size of the image">
+        <source>And the size of the image</source>
+        <target>И, конечно, размер картинки заглушки</target>
+      </trans-unit>
+      <trans-unit id="d66cc9323662ed9f535502a012758e77" resname="You can either download the image or use the url we provide you with">
+        <source>You can either download the image or use the url we provide you with</source>
+        <target>Затем либо скачайте саму картинку, или скопируйте её url адрес</target>
+      </trans-unit>
+      <trans-unit id="5e8cb6171a95201a6995ef508c429dd4" resname="Placeholder Example of size 500x300">
+        <source>Placeholder Example of size 500x300</source>
+        <target>Пример картинки заглушки размером 500x300</target>
+      </trans-unit>
+      <trans-unit id="c03947063782f67ccf0bd175455dd8f1" resname="We created this image">
+        <source>We created this image</source>
+        <target>Мы только что сгенерировали это изображение</target>
+      </trans-unit>
+      <trans-unit id="8071e68b728a2bc8d39e2c5412c1c544" resname="And we used the following query to create it">
+        <source>And we used the following query to create it</source>
+        <target>А вот url для его генерации</target>
+      </trans-unit>
+      <trans-unit id="665634217447a55ed4340b9b669612be" resname="I'm smaller, just 300x150">
+        <source>I'm smaller, just 300x150</source>
+        <target>Изменяйте размер - 300x150</target>
+      </trans-unit>
+      <trans-unit id="f07ed8d1967da1ba92dd85e7ba23ac8a" resname="Need a different size?">
+        <source>Need a different size?</source>
+        <target>Не подходит размер картинки?</target>
+      </trans-unit>
+      <trans-unit id="189ac920c25fdb2d927fd32654ccb3c6" resname="Simply change a few query parameters">
+        <source>Simply change a few query parameters</source>
+        <target>Достаточно изменить несколько параметров в url</target>
+      </trans-unit>
+      <trans-unit id="f3f1d0455a97ee4215b09c900e67decd" resname="Add more colors">
+        <source>Add more colors</source>
+        <target>Добавьте цвета</target>
+      </trans-unit>
+      <trans-unit id="62cfe092c79aaaa8a3732d3e4cec6e25" resname="These are not all color we know of!">
+        <source>These are not all color we know of!</source>
+        <target>Используйте любой цвет!</target>
+      </trans-unit>
+      <trans-unit id="0b2dc8986d63ddc7e5edc18d07f4edd4" resname="Again, couldn't be easier.">
+        <source>Again, couldn't be easier.</source>
+        <target>Нет ничего проще.</target>
+      </trans-unit>
+      <trans-unit id="b0a609384cb5e28004fbeda8a6914a3b" resname="placeholder, image, create, online, generate, tool">
+        <source>placeholder, image, create, online, generate, tool</source>
+        <target>заглушка, картинка, создать, онлайн, генератор, служба</target>
+      </trans-unit>
+      <trans-unit id="05627a26f9c49c478cf64de82ca86534" resname="hex value of background color for the placeholder image. Omit the pound sign(#)">
+        <source>hex value of background color for the placeholder image. Omit the pound sign(#)</source>
+        <target>HEX значение цвета фона картинки. Знак (#) указывать не нужно</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

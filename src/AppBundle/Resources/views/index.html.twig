@@ -4,31 +4,31 @@
 <div class="container">
 
     <div class="jumbotron">
-        <h1>Placeholder Image Service</h1>
-        <p>Quick and Simple</p>
+        <h1>{% trans %}Placeholder Image Service{% endtrans %}</h1>
+        <p>{% trans %}Quick and Simple{% endtrans %}</p>
     </div>
 
     <div class="row">
         <div class="col-sm-12 col-md-6">
-            <h2>It's really easy to use</h2>
-            <p>Just use our <a href="{{ path('build-online') }}">online placeholder building service</a> to create your own crafted placeholder image.</p>
+            <h2>{% trans %}It's really easy to use{% endtrans %}</h2>
+            <p>{% trans with {'%link_start%': '<a href=path("build-online")>', '%link_end%': '</a>'} %}Just use our %link_start%online placeholder building service%link_end% to create your own crafted placeholder image.{% endtrans %}</p>
             <h3>Three simple steps</h3>
             <ul>
-                <li>With our <a href="{{ path('build-online') }}">placeholder builder</a> create an image</li>
-                <li>Download the generated url or the image itself form the <a href="{{ path('build-online') }}">our building tool</a></li>
-                <li>Insert either the url as image's source attribute or the downloaded image</li>
+                <li>{% trans with {'%link_start%': '<a href=path("build-online")>', '%link_end%': '</a>'} %}With our %link_start%placeholder builder%link_end% create an image{% endtrans %}</li>
+                <li>{% trans with {'%link_start%': '<a href=path("build-online")>', '%link_end%': '</a>'} %}Download the generated url or the image itself form the %link_start%our building tool%link_end%{% endtrans %}</li>
+                <li>{% trans %}Insert either the url as image's source attribute or the downloaded image{% endtrans %}</li>
             </ul>
-            <h3>These are the things you can manipulate</h3>
+            <h3>{% trans %}These are the things you can manipulate{% endtrans %}</h3>
             <ul>
-                <li>Of course you can change the printed text itself</li>
-                <li>Then goes font size</li>
-                <li>And font color</li>
-                <li>Certainly you can change placeholder image background color</li>
-                <li>And the size of the image</li>
-                <li>You can either download the image or use the url we provide you with</li>
+                <li>{% trans %}Of course you can change the printed text itself{% endtrans %}</li>
+                <li>{% trans %}Then goes font size{% endtrans %}</li>
+                <li>{% trans %}And font color{% endtrans %}</li>
+                <li>{% trans %}Certainly you can change placeholder image background color{% endtrans %}</li>
+                <li>{% trans %}And the size of the image{% endtrans %}</li>
+                <li>{% trans %}You can either download the image or use the url we provide you with{% endtrans %}</li>
             </ul>
-            <h3>Help us running</h3>
-            <p>If you like our service, please, donate to help us run our project.</p>
+            <h3>{% trans %}Help us running{% endtrans %}</h3>
+            <p>{% trans %}If you like our service, please, donate to help us run our project.{% endtrans %}</p>
             <div>
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
@@ -41,33 +41,33 @@
         <div class="col-sm-12 col-md-6 text-center">
             <div class="col-xs-12">
                 <div class="thumbnail">
-                    {% set query = url('get-placeholder', {'text': 'Placeholder Example of size 500x300', 'height': 300, 'width': 500, 'color': '6FBCFF', 'font-color': '555'}) %}
+                    {% set query = url('get-placeholder', {'text': 'Placeholder Example of size 500x300' | trans, 'height': 300, 'width': 500, 'color': '6FBCFF', 'font-color': '555'}) %}
                     <img src="{{ query }}">
                     <div class="caption">
-                        <h3>We created this image</h3>
-                        <p>And we used the following query to create it</p>
+                        <h3>{% trans %}We created this image{% endtrans %}</h3>
+                        <p>{% trans %}And we used the following query to create it{% endtrans %}</p>
                         <pre>{{ query }}</pre>
                     </div>
                 </div>
             </div>
             <div class="col-xs-6">
                 <div class="thumbnail">
-                    {% set query = url('get-placeholder', {'text': 'I\'m smaller, just 300x150', 'height': 150, 'width': 300, 'color': 'B30000', 'font-color': 'CCC', 'font-size': 14}) %}
+                    {% set query = url('get-placeholder', {'text': 'I\'m smaller, just 300x150' | trans, 'height': 150, 'width': 300, 'color': 'B30000', 'font-color': 'CCC', 'font-size': 14}) %}
                     <img src="{{ query }}">
                     <div class="caption">
-                        <h3>Need a different size?</h3>
-                        <p>Simply change a few query parameters</p>
+                        <h3>{% trans %}Need a different size?{% endtrans %}</h3>
+                        <p>{% trans %}Simply change a few query parameters{% endtrans %}</p>
                         <pre>{{ query }}</pre>
                     </div>
                 </div>
             </div>
             <div class="col-xs-6">
                 <div class="thumbnail">
-                    {% set query = url('get-placeholder', {'text': 'Add more colors', 'height': 150, 'width': 300, 'color': 'CFFFBD', 'font-color': 'E014ED'}) %}
+                    {% set query = url('get-placeholder', {'text': 'Add more colors' | trans, 'height': 150, 'width': 300, 'color': 'CFFFBD', 'font-color': 'E014ED'}) %}
                     <img src="{{ query }}">
                     <div class="caption">
-                        <h3>These are not all color we know of!</h3>
-                        <p>Again, couldn't be easier.</p>
+                        <h3>{% trans %}These are not all color we know of!{% endtrans %}</h3>
+                        <p>{% trans %}Again, couldn't be easier.{% endtrans %}</p>
                         <pre>{{ query }}</pre>
                     </div>
                 </div>

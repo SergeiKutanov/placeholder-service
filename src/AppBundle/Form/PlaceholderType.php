@@ -22,12 +22,6 @@ class PlaceholderType extends AbstractType{
                 'text',
                 array(
                     'required'  => false,
-                    'label'     => 'Text',
-                    'attr'      => array(
-                        'class'         => 'form-control',
-                        'placeholder'   => 'Enter text to be printed on the image (default value - empty)'
-                    ),
-                    'data'      => 'Some Text',
                     'label_attr'=> array(
                         'class'         => 'control-label col-sm-2'
                     )
@@ -38,10 +32,8 @@ class PlaceholderType extends AbstractType{
                 'integer',
                 array(
                     'required'  => false,
-                    'label'     => 'Width (px)',
                     'attr'      => array(
-                        'class'         => 'form-control',
-                        'placeholder'   => 'Enter width for your image (default value - 300)'
+                        'class'         => 'form-control'
                     ),
                     'data'      => 300,
                     'label_attr'=> array(
@@ -54,10 +46,8 @@ class PlaceholderType extends AbstractType{
                 'integer',
                 array(
                     'required'  => false,
-                    'label'     => 'Height (px)',
                     'attr'      => array(
-                        'class'         => 'form-control',
-                        'placeholder'   => 'Enter height for your image (default value - 300)'
+                        'class'         => 'form-control'
                     ),
                     'data'      => 300,
                     'label_attr'=> array(
@@ -70,7 +60,6 @@ class PlaceholderType extends AbstractType{
                 'text',
                 array(
                     'required'  => false,
-                    'label'     => 'Backrgound Color (HEX)',
                     'attr'      => array(
                         'class'         => 'form-control'
                     ),
@@ -85,7 +74,6 @@ class PlaceholderType extends AbstractType{
                 'text',
                 array(
                     'required'  => false,
-                    'label'     => 'Font Color (HEX)',
                     'attr'      => array(
                         'class'         => 'form-control'
                     ),
@@ -100,7 +88,6 @@ class PlaceholderType extends AbstractType{
                 'integer',
                 array(
                     'required'  => false,
-                    'label'     => 'Font Size (px)',
                     'attr'      => array(
                         'class'         => 'form-control'
                     ),
