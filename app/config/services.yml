@@ -10,3 +10,9 @@ services:
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
     placeholder_service:
         class: AppBundle\Service\PlaceholderService
+
+#    app.locale_listener:
+#        class: AppBundle\EventListener\LocaleListener
+#        arguments: ["%kernel.default_locale%"]
+#        tags:
+#            - { name: kernel.event_subscriber }

@@ -13,10 +13,12 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/{_locale}", name="homepage", defaults={"_locale": "en"}, requirements={"_locale": "%app.locales%"})
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+        $l = $request->getSession()->get('_locale');
+        var_dump($l);
         return $this->render('AppBundle::index.html.twig');
     }
 
@@ -66,7 +68,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/build-online", name="build-online")
+     * @Route("/{_locale}/build-online", name="build-online", requirements={"%app.locales%"})
      * @Method("GET")
      */
     public function generateOnlineAction()
